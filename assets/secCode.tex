@@ -1,0 +1,9 @@
+\captionof{listing}{Создание окна}
+\label{code:cpp-window}
+\inputminted[
+    breaklines,
+    fontsize=\small
+]{cpp}{code/window.cpp}
+Код, приведенный в листинге ~\ref{code:cpp-window}, по сути является также игровым движком. В структуре \texttt{WINDOW} описывается основное окно приложения, которое наследует функциональность от классов \texttt{AudioManager}, \texttt{RenderManager} и \texttt{TransferManager}. Вложенная структура \texttt{Interactable} отвечает за интерактивные объекты: для них хранятся указатель на шейдер \texttt{outlineShader}, размеры \texttt{sizes}, а также состояния \texttt{openned} и \texttt{hovered}.
+
+Для обработки действий пользователя используется структура \texttt{CURSOR}, в которой сохраняются позиция курсора \texttt{pos}, состояние кнопок мыши \texttt{lmb} и \texttt{rmb}, а также величина прокрутки \texttt{scroll}. Настройки приложения вынесены в структуру \texttt{Settings}: в ней задаются параметры \texttt{isVolume}, \texttt{isVsync}, \texttt{Resolution}, \texttt{Language}, \texttt{volume}, \texttt{UIScale} и \texttt{fps}.
